@@ -7,6 +7,6 @@
 <? } else { ?>
 <li><a href='./register.php'>Register</a></li>
 <? } ?>
-<li><a href='http://mods.jmh9072.com'>Mod Stalk</a></li>
+<li><a href='./stalk.php?uid=1'>Mod Stalk</a></li>
 <li><a href='./about.php'>About</a></li>
 </ul>
