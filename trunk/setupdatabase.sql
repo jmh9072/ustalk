@@ -69,7 +69,6 @@ INSERT INTO `bungie` VALUES(1667625, '2010-04-29 19:22:00', '2010-08-28 11:30:00
 INSERT INTO `bungie` VALUES(1804295, '2010-07-01 02:30:00', '2010-08-28 11:29:56', 'runningturtle', 45634237);
 INSERT INTO `bungie` VALUES(1837598, '2010-08-28 05:32:00', '2010-08-28 11:27:46', 'TOM T 117', 48034678);
 INSERT INTO `bungie` VALUES(1848159, '2010-08-27 16:00:00', '2010-08-28 11:28:41', 'x Foman123 x', 47976451);
-INSERT INTO `bungie` VALUES(2015943, '2010-08-25 23:55:00', '2010-08-28 11:29:00', 'DR WE1RD', 47991569);
 INSERT INTO `bungie` VALUES(2285405, '2010-07-09 15:59:00', '2010-08-28 11:29:47', 'lukems', 45968034);
 INSERT INTO `bungie` VALUES(2500705, '2010-07-29 09:13:00', '2010-08-28 11:29:36', 'Pezz', 46203336);
 INSERT INTO `bungie` VALUES(2597260, '2010-08-27 20:50:00', '2010-08-28 11:28:20', 'bobcast', 48039348);
@@ -78,6 +77,7 @@ INSERT INTO `bungie` VALUES(2935625, '2010-08-25 04:57:00', '2010-08-28 11:29:05
 INSERT INTO `bungie` VALUES(3446359, '2010-08-28 09:00:00', '2010-08-28 11:27:20', 'Predator5791', 47921619);
 INSERT INTO `bungie` VALUES(5559084, '2010-08-27 20:04:00', '2010-08-28 11:28:26', 'urk', 46793669);
 INSERT INTO `bungie` VALUES(8705967, '2010-08-28 09:40:00', '2010-08-28 11:27:10', 'Recon Number 54', 48052773);
+INSERT INTO `bungie` VALUES(8714227, '2010-08-25 23:55:00', '2010-08-28 11:29:00', 'Dr Weird', 48516815);
 
 -- --------------------------------------------------------
 
@@ -153,7 +153,6 @@ INSERT INTO `uwatch` VALUES(1, 1667625, 'Skiptrace', 'http://www.bungie.net/Foru
 INSERT INTO `uwatch` VALUES(1, 1804295, 'runningturtle', 'http://www.bungie.net/Forums/skins/default/avatars/gholsbane_avatar.gif');
 INSERT INTO `uwatch` VALUES(1, 1837598, 'TOM T 117', 'http://www.bungie.net/Forums/skins/default/avatars/Twinkie_7thMarathon.gif');
 INSERT INTO `uwatch` VALUES(1, 1848159, 'x Foman123 x', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_foman.gif');
-INSERT INTO `uwatch` VALUES(1, 2015943, 'DR WE1RD', 'http://www.bungie.net/Forums/skins/default/avatars/h2vistatazmaniandude.gif');
 INSERT INTO `uwatch` VALUES(1, 2285405, 'lukems', 'http://www.bungie.net/Forums/skins/default/avatars/marathon.gif');
 INSERT INTO `uwatch` VALUES(1, 2500705, 'Pezz', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_pezza.gif');
 INSERT INTO `uwatch` VALUES(1, 2597260, 'bobcast', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_bobcast.jpg');
@@ -162,3 +161,4 @@ INSERT INTO `uwatch` VALUES(1, 2935625, 'Old Papa Rich', 'http://www.bungie.net/
 INSERT INTO `uwatch` VALUES(1, 3446359, 'Predator5791', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_predator5791.gif');
 INSERT INTO `uwatch` VALUES(1, 5559084, 'urk', 'http://www.bungie.net/Forums/skins/default/avatars/urk.gif');
 INSERT INTO `uwatch` VALUES(1, 8705967, 'Recon Number 54', 'http://www.bungie.net/Forums/skins/default/avatars/modertaor_Recon54.gif');
+INSERT INTO `uwatch` VALUES(1, 8714227, 'Dr Weird', 'http://www.bungie.net/Stats/emblem.ashx?s=90&0=0&1=10&2=10&3=3&fi=38&bi=2&fl=0&m=1');
