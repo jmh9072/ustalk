@@ -52,11 +52,11 @@ class bungie
 		}
 	}
 	
-	static function ban($bid, $length)
+	static function setLastUpdate($bid, $lastUpdateTime)
 	{
 		$bid = mysql_escape_string($bid);
 		$length = mysql_escape_string($length);
-		$sql = 'UPDATE `bungie` SET `update` = \''.mysql_escape_string(date('Y-m-d H:i:s', time() + $length)).'\' WHERE `id` = \''.$bid.'\' LIMIT 1;';
+		$sql = 'UPDATE `bungie` SET `update` = \''.mysql_escape_string(date('Y-m-d H:i:s', $lastUpdateTime)).'\' WHERE `id` = \''.$bid.'\' LIMIT 1;';
 		
 				$result = mysql_query($sql);
 		if(mysql_errno())

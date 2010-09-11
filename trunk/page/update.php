@@ -30,6 +30,8 @@ foreach($bids as $bid)
 		$user = bungie::getUser($bid);
 	}
 
+	bungie::setLastUpdate($bid, time()); //prevent this script's running more than once on the same user at the same time
+
 	//curl to bungie server, 
 	require_once "lib/dataAccess.php";
 	if (!$user['name'] || $user['userpost'] == 0)
@@ -41,7 +43,7 @@ foreach($bids as $bid)
 	  if(empty($name))
 	  {
 	  	echo "<message>User does not exist</message>";
-	  	bungie::ban($bid, 172800); //don't try to update again for two days
+	  	bungie::setLastUpdate($bid, time() + 172800); //don't try to update again for two days
 	  	continue;
 	  }
 	  else
@@ -76,7 +78,7 @@ sleep(2);
 	if(empty($activity))
 	{	
 		echo "<message>Error retrieving last activity.</message>";
-		bungie::ban($bid, 86400); //don't try to update again for one day
+		bungie::setLastUpdate($bid, time() + 86400); //don't try to update again for one day
 		continue;
 	}
 	$activity[1] = ereg_replace("\.", "/", $activity[1]);
