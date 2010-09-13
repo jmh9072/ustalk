@@ -10,7 +10,7 @@
 - AUTO mode
 	- User simply inputs UID and everything is filled in and updated automatically
 - Display user's UID somewhere on site
-	- Welcome [user] box where login boxes are?
+	- Welcome user box where login boxes are?
 - Add a "Help Center"/"Help Section"
 	- How to find a UID
 	- Greasemonkey Script Help
@@ -20,3 +20,4 @@
 	- "Who is stalking me?"
 - New About Page
 - Download profile and grab last active date (in case user does not post often) and current avatar (for AUTO mode) periodically.
+- Group linking and integration in Greasemonkey script
