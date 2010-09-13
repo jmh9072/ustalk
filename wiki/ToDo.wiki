@@ -1,4 +1,5 @@
 #summary Things To Do
+#labels -
 
 = Things To Do =
 
@@ -10,8 +11,11 @@
 	- User simply inputs UID and everything is filled in and updated automatically
 - Display user's UID somewhere on site
 	- Welcome [user] box where login boxes are?
-- Make a tutorial on finding bungie user's UID
-	- Integrate auto-find function into Greasemonkey
+- Add a "Help Center"/"Help Section"
+	- How to find a UID
+	- Greasemonkey Script Help
+	- Difference between UID and MemberID
+- Integrate auto-find UID function into Greasemonkey
 - Stalking statistics
 	- "Who is stalking me?"
 - New About Page
