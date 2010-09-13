@@ -124,13 +124,13 @@ class user {
 		}
 		return true;
 	}
-	static function update($id, $bid, $alias, $avatar)
+	static function update($id, $bid, $alias, $avatar, $currentbid)
 	{
 		$id = mysql_escape_string(strip_tags($id));
 		$bid = mysql_escape_string(strip_tags($bid));
 		$alias = mysql_escape_string(strip_tags($alias));
 		$avatar = mysql_escape_string(strip_tags($avatar));
-		$query = "UPDATE `uwatch` SET `name` = '".$alias."', `avatar` = '".$avatar."' WHERE `uwatch`.`id` = ".$id." AND `uwatch`.`bid` = ".$bid." LIMIT 1;";
+		$query = "UPDATE `uwatch` SET `bid` = '".$bid."', `name` = '".$alias."', `avatar` = '".$avatar."' WHERE `uwatch`.`id` = ".$id." AND `uwatch`.`bid` = ".$currentbid." LIMIT 1;";
 		$result = mysql_query($query);
 		if(mysql_errno())
 		{
@@ -138,6 +138,8 @@ class user {
 				."Please report this error to jmh9072";
 			return false;
 		}
+		if ($currentbid != $bid)
+			bungie::addUser($bid);
 		return true;
 	}
 	static function changepass($id, $currentpass, $newpass)

@@ -19,7 +19,8 @@ if ($_POST['action'] == "Update")
 	if (user::update($_SESSION['user']['id'],
 			$_POST['bid'],
 			$_POST['name'],
-			$_POST['avatar']))
+			$_POST['avatar'],
+			$_POST['currentbid']))
 		$error='User successfully updated.';
 	else
 		$error='User could not be updated.';
