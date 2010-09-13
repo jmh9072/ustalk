@@ -1,0 +1,18 @@
+#summary Things To Do
+
+= Things To Do =
+
+- Javascript/AJAX stalk.php
+- Way for users to report their own last active time
+	- Greasemonkey
+	- Solution not involving Greasemonkey
+- AUTO mode
+	- User simply inputs UID and everything is filled in and updated automatically
+- Display user's UID somewhere on site
+	- Welcome [user] box where login boxes are?
+- Make a tutorial on finding bungie user's UID
+	- Integrate auto-find function into Greasemonkey
+- Stalking statistics
+	- "Who is stalking me?"
+- New About Page
+- Download profile and grab last active date (in case user does not post often) and current avatar (for AUTO mode) periodically.
