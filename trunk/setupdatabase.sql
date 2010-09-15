@@ -2,9 +2,7 @@
 -- version 2.11.9.4
 -- http://www.phpmyadmin.net
 --
--- Generation Time: Aug 28, 2010 at 12:57 PM
--- Server version: 5.0.91
--- PHP Version: 5.2.8
+-- Generation Time: Sep 15, 2010 at 1:54 AM
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -122,7 +120,7 @@ CREATE TABLE `uwatch` (
 --
 
 INSERT INTO `uwatch` VALUES(1, 1, 'Achronos', 'http://www.bungie.net/Forums/skins/default/avatars/staffonly_achronos.gif');
-INSERT INTO `uwatch` VALUES(1, 104, 'stosh', 'http://www.bungie.net/Forums/skins/default/avatars/skirmish.gif');
+INSERT INTO `uwatch` VALUES(1, 104, 'stosh', 'http://www.bungie.net/Stats/emblem.ashx?s=90&0=24&1=2&2=2&3=21&fi=41&bi=1&fl=1&m=3');
 INSERT INTO `uwatch` VALUES(1, 184, 'chris547', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_chris547.gif');
 INSERT INTO `uwatch` VALUES(1, 326, 'goweb', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_goweb.gif');
 INSERT INTO `uwatch` VALUES(1, 928, 'Sir Fragula', 'http://www.bungie.net/Forums/skins/default/avatars/sirfragula_avatar.gif');
@@ -150,8 +148,8 @@ INSERT INTO `uwatch` VALUES(1, 1083656, 'Butane123', 'http://www.bungie.net/Stat
 INSERT INTO `uwatch` VALUES(1, 1219475, 'x Lord Revan x', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_revan.jpg');
 INSERT INTO `uwatch` VALUES(1, 1659344, 'The Slayer', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_theslayer.gif');
 INSERT INTO `uwatch` VALUES(1, 1667625, 'Skiptrace', 'http://www.bungie.net/Forums/skins/default/avatars/default_avatar.gif');
-INSERT INTO `uwatch` VALUES(1, 1804295, 'runningturtle', 'http://www.bungie.net/Forums/skins/default/avatars/gholsbane_avatar.gif');
-INSERT INTO `uwatch` VALUES(1, 1837598, 'TOM T 117', 'http://www.bungie.net/Forums/skins/default/avatars/Twinkie_7thMarathon.gif');
+INSERT INTO `uwatch` VALUES(1, 1804295, 'runningturtle', 'http://www.bungie.net/Forums/skins/default/avatars/runningturtle.gif');
+INSERT INTO `uwatch` VALUES(1, 1837598, 'TOM T 117', 'http://www.bungie.net/Stats/emblem.ashx?s=90&0=15&1=2&2=15&3=2&fi=10&bi=38&fl=1&m=3');
 INSERT INTO `uwatch` VALUES(1, 1848159, 'x Foman123 x', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_foman.gif');
 INSERT INTO `uwatch` VALUES(1, 2285405, 'lukems', 'http://www.bungie.net/Forums/skins/default/avatars/marathon.gif');
 INSERT INTO `uwatch` VALUES(1, 2500705, 'Pezz', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_pezza.gif');
