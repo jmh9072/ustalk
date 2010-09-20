@@ -1,6 +1,6 @@
 // Mod/User Stalker
 // Version 1.1
-// 3/22/2009
+// 9/20/2010
 // Script created by CAVX, modified by jmh9072
 // ModStalker and uStalker created by jmh9072 and Firebird347
 //
@@ -58,7 +58,7 @@ if (GM_getValue('uStalker', 'no') != "no"){
 	usChecked = "checked='checked'";
 	usID = GM_getValue('uStalker');}
 var divArray0 = document.getElementsByTagName("div");
-document.getElementById("ctl00_forumSidebarPanel").innerHTML += "<div id='settingDiv' style='position:absolute;top:145px;left:50%;margin-left:-458px;background:#000000; width:882px; padding:10px; border:1px solid #aaaaaa; display:none;'><div style='background:#000066; margin-left:-10px; margin-right:-10px;margin-top:-10px;padding:5px;'><a href='#' onclick='closeConfig();' style='float:right;'>[X]</a>Mod Stalker Settings</div><center>Use Moderator Finder?<input type='checkbox' id='mS' name='mS'"+msChecked+"><br>Use uStalker?<input type='checkbox' name='uS' id='uS'"+usChecked+"> (uStalker userID <input name='uStalkID' id='uStalkID' value='"+usID+"' type='text'  size=1 style='background:#dddddd; border:0px;'>)<br><br>Minimize by default?<input type='checkbox' id='min' name='min'"+minChecked+"><br><br><a id='theButton' href='#'>[Save Settings]</a><br><br><span style='font-size:9px;'>Script by CAVX, modified by jmh9072.<br>ModStalker and uStalk by jmh9072 and Firebird347.</span></center></div>";
+document.getElementById("ctl00_forumSidebarPanel").innerHTML += "<div id='settingDiv' style='position:absolute;top:145px;left:50%;margin-left:-458px;background:#000000; width:882px; padding:10px; border:1px solid #aaaaaa; display:none;'><div style='background:#000066; margin-left:-10px; margin-right:-10px;margin-top:-10px;padding:5px;'><a href='#' onclick='closeConfig();' style='float:right;'>[X]</a>Mod Stalker Settings</div><center>Use Moderator Finder?<input type='checkbox' id='mS' name='mS'"+msChecked+"><br>Use uStalk?<input type='checkbox' name='uS' id='uS'"+usChecked+"> (uStalk UID <input name='uStalkID' id='uStalkID' value='"+usID+"' type='text'  size=1 style='background:#dddddd; border:0px;'>)<br><br>Minimize by default?<input type='checkbox' id='min' name='min'"+minChecked+"><br><br><a id='theButton' href='#'>[Save Settings]</a><br><br><span style='font-size:9px;'>Script by CAVX, modified by jmh9072.<br>ModStalker and uStalk by jmh9072 and Firebird347.</span></center></div>";
 if(GM_getValue("uStalker") == undefined){
 document.getElementById("ctl00_forumSidebarPanel").innerHTML += "Please click the wrench to configure the uStalker."; }
 	//reConfig();}
@@ -146,7 +146,7 @@ GM_xmlhttpRequest({
 	'Accept': 'application/atom+xml,application/xml,text/xml',
     },
     onload: function(responseDetails) {
-        var temp = "<div id='uStalker'><div style='background:url(http://www.bungie.net/images/base_struct_images/contentBg/blueheader.jpg); width:271px; padding-top:2px; padding-left:5px; height:34px;'><span style='font-size:15px; font-weight:normal;'><a href='http://ustalk.jmh9072.com/stalk.php?uid="+GM_getValue('uStalker', '1')+"' style='float:right; margin-right:5px;' target='_blank'>[+]</a>uStalk v1.1</span></div><TABLE cellpadding='5px' style='margin-top:-22px;'><TR><TH width='36'>Avatar</TH><TH width='110'>Name</TH><TH width='52'>Date</TH><TH>Time</TH></TR>";
+        var temp = "<div id='uStalker'><div style='background:url(http://www.bungie.net/images/base_struct_images/contentBg/blueheader.jpg); width:271px; padding-top:2px; padding-left:5px; height:34px;'><span style='font-size:15px; font-weight:normal;'><a href='http://ustalk.jmh9072.com/stalk.php?uid="+GM_getValue('uStalker', '1')+"' style='float:right; margin-right:5px;' target='_blank'>[+]</a>uStalk</span></div><TABLE cellpadding='5px' style='margin-top:-22px;'><TR><TH width='36'>Avatar</TH><TH width='110'>Name</TH><TH width='52'>Date</TH><TH>Time</TH></TR>";
 
         var parser = new DOMParser();
         var dom = parser.parseFromString(responseDetails.responseText,

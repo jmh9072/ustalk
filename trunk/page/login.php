@@ -1,6 +1,18 @@
 <?
-if($_SESSION['user'] || $page['noLogin'] === true)
+if($_SESSION['user'])
+	{
+	echo "<div class='login'>";
+	echo "<br />";
+	echo "Welcome, ".$_SESSION['user']['name']."!";
+	echo "<br />";
+	echo "uStalk UID: ".$_SESSION['user']['id'];
+	echo "</div>";
 	return;
+	}
+
+if ($page['noLogin'] === true)
+	return;
+
 if($HEAD)
 	return;
 
