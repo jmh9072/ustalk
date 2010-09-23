@@ -3,7 +3,12 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
-<?=$data['head'];linkCSS('default');?>
+<?
+echo $data['head'];
+linkCSS('default');
+if (stristr($_SERVER['HTTP_USER_AGENT'], "AppleWebKit"))
+	linkCSS('webkit');
+?>
 </head>
 <body>
 <div class='header'><div class='logo'></div><div class='msg'><?=randomMessage()?></msg></div>
