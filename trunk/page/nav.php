@@ -9,4 +9,3 @@
 <? } ?>
 <li><a href='./stalk.php?uid=1'>Mod Stalk</a></li>
 <li><a href='./about.php'>About</a></li>
-</ul>
