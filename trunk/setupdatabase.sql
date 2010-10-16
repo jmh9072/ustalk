@@ -43,7 +43,6 @@ INSERT INTO `bungie` VALUES(928, '2010-08-23 11:43:00', '2010-08-28 11:29:20', '
 INSERT INTO `bungie` VALUES(1195, '2009-10-30 00:00:00', '2010-08-29 07:05:14', 'Sketch', 43452749);
 INSERT INTO `bungie` VALUES(2488, '2009-11-23 18:27:00', '2010-08-28 11:30:11', 'BobBQ', 39138027);
 INSERT INTO `bungie` VALUES(3229, '2010-08-27 21:53:00', '2010-08-28 11:28:10', 'Yoozel', 47946916);
-INSERT INTO `bungie` VALUES(3876, '2010-08-28 08:08:00', '2010-08-28 11:27:35', 'just another fan', 47994330);
 INSERT INTO `bungie` VALUES(6693, '2010-08-24 11:22:00', '2010-08-28 11:29:10', 'Nedus', 46970214);
 INSERT INTO `bungie` VALUES(23581, '2009-10-14 00:00:00', '2010-08-29 07:05:23', 'Anton P Nym', 21882864);
 INSERT INTO `bungie` VALUES(29832, '2010-08-27 18:29:00', '2010-08-28 11:28:36', 'Captain K Mart', 48036712);
@@ -127,7 +126,6 @@ INSERT INTO `uwatch` VALUES(1, 928, 'Sir Fragula', 'http://www.bungie.net/Forums
 INSERT INTO `uwatch` VALUES(1, 1195, 'Sketch', 'http://www.bungie.net/Forums/skins/default/avatars/staffonly_ske7ch.gif');
 INSERT INTO `uwatch` VALUES(1, 2488, 'BobBQ', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_BobBQ.gif');
 INSERT INTO `uwatch` VALUES(1, 3229, 'Yoozel', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_yoozel.gif');
-INSERT INTO `uwatch` VALUES(1, 3876, 'just another fan', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_jaf.gif');
 INSERT INTO `uwatch` VALUES(1, 6693, 'Nedus', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_nedus.gif');
 INSERT INTO `uwatch` VALUES(1, 23581, 'Anton P Nym', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_apn.gif');
 INSERT INTO `uwatch` VALUES(1, 29832, 'Captain K Mart', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_kmart.gif');
