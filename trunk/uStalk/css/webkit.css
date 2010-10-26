@@ -1,0 +1,10 @@
+/*
+Changes to the default css necessary for WebKit-based browsers (Safari, Chrome, etc.)
+*/
+div.nav li {
+	margin: 0px 8px 0px 0px;
+	padding: 0px 0px; 0px 5px;
+	float: left;
+	list-style-image: none;
+	width: auto;
+}

@@ -1,0 +1,75 @@
+How to use uStalk's XML Interface
+
+First, let's take a look at the URL you'll want to access to get all of the juicy data:
+http://ustalk.jmh9072.com/stalk.php?client=XML&uid=1&display=4
+
+You'll probably want to replace some of those values, so let me explain what they are.
+"uid" tells the system which uStalk account you'd like to grab the data from.
+"display" tells the system how many users you want to display. In this case, 
+  it shows the last 4 users on that list that we've seen, and disregards the rest.
+
+
+Now, let's look at what you might get if you ask for 1 user from the Mod Stalker (uStalk uid == 1):
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ustalk>
+  <user>
+    <online>0</online>
+    <uid>1</uid>
+    <avatar>http://www.bungie.net/Forums/skins/default/avatars/staffonly_achronos.gif</avatar>
+    <name>Achronos</name>
+    <date>4/10/2009</date>
+    <time>13:57</time>
+  </user>
+</ustalk>
+
+Now what do these elements actually mean? (Most of them are self-explanatory)
+</ustalk></ustalk> - These tags go around the entire document. You don't need to worry about them.
+<user></user> - These tags separate elements by the user they correspond to.
+<online>1</online> - If this tag shows a 0, the site has determined that the user may be offline. 
+  If it's a 1, the site thinks they're probably online (they've posted in the last 15 minutes).
+  If you want to do your own time-elapsed-vs-online calculations, you can ignore this.
+<uid>1</uid> - This is the user's Bnet UID.
+<avatar>http://...</avatar> - This is a link to the user's avatar.
+<name>Achronos</name> - This is the user's Bnet username.
+<date>4/10/2009</date> - This is the last date we saw the user, in the form MM/DD/YYYY.
+<time>13:57</time> - THis is the last time we saw the user, using the 24-hour clock.
+
+Now, here's some code from the (GPL-licensed) uStalk Greasemonkey script that you may find helpful for you AJAX programming:
+
+        var temp = "<div id='uStalker'><div style='background:url(http://www.bungie.net/images/base_struct_images/contentBg/blueheader.jpg); width:271px; padding-top:2px; padding-left:5px; height:34px;'><span style='font-size:15px; font-weight:normal;'><a href='http://ustalk.jmh9072.com/stalk.php?uid="+GM_getValue('uStalker', '1')+"' style='float:right; margin-right:5px;' target='_blank'>[+]</a>uStalk v1.1</span></div><TABLE cellpadding='5px' style='margin-top:-22px;'><TR><TH width='36'>Avatar</TH><TH width='110'>Name</TH><TH width='52'>Date</TH><TH>Time</TH></TR>";
+
+        var parser = new DOMParser();
+        var dom = parser.parseFromString(responseDetails.responseText,
+            "application/xml");
+        var user = dom.getElementsByTagName('user');
+
+        for (var x = 0; x < user.length; x++) {
+	    if (user[x].getElementsByTagName('online')[0].textContent == "1")
+	      temp += "<tr style='background:url(http://i208.photobucket.com/albums/bb114/CavAvx/online.png) repeat;'><td>";
+	    else
+	      temp += "<tr><td>";
+	    temp += "<a href=\"http://www.bungie.net/Account/Profile.aspx?uid=";
+            temp += user[x].getElementsByTagName('uid')[0].textContent;
+	    temp += "\"><img src=\"";
+	    temp += user[x].getElementsByTagName('avatar')[0].textContent;
+	    temp += "\"></a></td><td>";
+	    temp += user[x].getElementsByTagName('name')[0].textContent;
+	    temp += "</td><td>";
+	    temp += user[x].getElementsByTagName('date')[0].textContent;
+	    temp += "</td><td>";
+	    temp += user[x].getElementsByTagName('time')[0].textContent;
+	    temp += "</td></tr>";
+        }
+	temp += "</table></div>";
+	document.getElementById("scriptOptions").innerHTML += temp;
+
+This code creates a DOMParser object which makes it easy to extract all the information we need
+from the XML document. It then goes through each listed Bnet user and adds the information into
+an HTML table and integrates it into the sidebar of Bnet Forum topic pages. This code can be
+easily changed to fit your site.
+
+The rest of the code for this script is available for use or dissection at:
+http://ustalk.jmh9072.com/uStalk.user.js
+
+Thanks for reading this document and good luck!
