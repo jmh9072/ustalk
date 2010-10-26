@@ -1,0 +1,47 @@
+/*
+If you don't like how this site looks, 
+PM Firebird347 and I'll let you know how you can theme the site.
+*/
+body {
+	background-color: #000;
+	color: #fff;
+}
+div.nav ul
+{
+	margin: 0;
+	padding: 0;
+	list-style: none inside none;
+}
+div.nav li {
+	margin: 0;
+	padding: 0px 0px;
+	float: left;
+	list-style-image: none;
+	width: auto;
+}
+div.body { width: 600px;}
+
+div.logo {
+	background: url(/images/logoSmall.png) no-repeat;
+	height: 100px;
+} 
+
+div.header {
+	background: url(/images/headerSmall.png) repeat-x #ccc;
+	height: 100px;
+	background-position: -40px 0px;
+}
+div.login {
+	position: absolute;
+	top: 0px;
+	right: 15px;
+	text-align: right;
+}
+div.version {
+	color: #1F1F1F;
+	text-align: right;
+	font-size: 12px;
+}
+span.error {
+	color: red;
+}
