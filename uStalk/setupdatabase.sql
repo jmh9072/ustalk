@@ -55,7 +55,6 @@ INSERT INTO `bungie` VALUES(350197, '2010-07-24 01:17:00', '2010-08-28 11:29:41'
 INSERT INTO `bungie` VALUES(397780, '2010-08-28 02:42:00', '2010-08-28 11:27:55', 'Senor Leche', 47948391);
 INSERT INTO `bungie` VALUES(399968, '2010-08-28 08:31:00', '2010-08-28 11:27:29', 'El Roboto', 47570132);
 INSERT INTO `bungie` VALUES(424344, '2010-08-26 12:12:00', '2010-08-28 11:28:55', 'odmichael', 48047498);
-INSERT INTO `bungie` VALUES(470280, '2010-08-27 18:37:00', '2010-08-28 11:28:31', 'Great_Pretender', 47051906);
 INSERT INTO `bungie` VALUES(596146, '2010-08-28 10:04:00', '2010-08-28 11:27:05', 'borrowedchief', 47946894);
 INSERT INTO `bungie` VALUES(785739, '2010-08-28 09:36:00', '2010-08-28 11:27:15', 'Qbix89', 48044223);
 INSERT INTO `bungie` VALUES(995056, '2010-08-27 09:08:00', '2010-08-28 21:57:02', 'True Underdog', 48043482);
@@ -138,7 +137,6 @@ INSERT INTO `uwatch` VALUES(1, 350197, 'THE DON WAN', 'http://www.bungie.net/For
 INSERT INTO `uwatch` VALUES(1, 397780, 'Senor Leche', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_leche.gif');
 INSERT INTO `uwatch` VALUES(1, 399968, 'El Roboto', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_elroboto.gif');
 INSERT INTO `uwatch` VALUES(1, 424344, 'odmichael', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_odmichael.gif');
-INSERT INTO `uwatch` VALUES(1, 470280, 'Great_Pretender', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_greatpretender.gif');
 INSERT INTO `uwatch` VALUES(1, 596146, 'borrowedchief', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_borrowedchief.jpg');
 INSERT INTO `uwatch` VALUES(1, 785739, 'Qbix89', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_qbix89.gif');
 INSERT INTO `uwatch` VALUES(1, 995056, 'True Underdog', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_trueunderdog.gif');

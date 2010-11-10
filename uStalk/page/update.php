@@ -72,7 +72,7 @@ sleep(2);
 	$userpostthread[1] = ereg_replace("amp;", "", $userpostthread[1]);
 	$data4 = getRemoteHTMLBody($userpostthread[1]);
 
-	$exp2 = '/'.$user['name'].'<\/a>.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*last post: (.*) PDT/m';
+	$exp2 = '/'.$user['name'].'<\/a>.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*last post: (.*) P/m';
 	$num5 = preg_match($exp2, $data4, $activity);
 
 	if(empty($activity))
