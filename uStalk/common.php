@@ -7,7 +7,7 @@ session_start();
 //Setup global vars
 //Connect to DB
 global $db;
-require_once "nonsense.php";
+require_once "settings.php";
 require_once "lib/user.php";
 require_once "lib/functions.php";
 global $page;
