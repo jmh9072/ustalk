@@ -49,6 +49,7 @@ INSERT INTO `bungie` VALUES(29832, '2010-08-27 18:29:00', '2010-08-28 11:28:36',
 INSERT INTO `bungie` VALUES(37221, '2010-03-16 06:11:00', '2010-08-28 11:30:06', 'GameJunkieJim', 42155212);
 INSERT INTO `bungie` VALUES(38444, '2010-08-23 18:07:00', '2010-08-28 11:29:15', 'Nosferatu_Soldie', 43084746);
 INSERT INTO `bungie` VALUES(40153, '2010-08-20 11:43:00', '2010-08-28 11:29:26', 'ash55', 47750865);
+INSERT INTO `bungie` VALUES(89878, '2010-11-20 06:01:00', '2010-08-28 11:29:30', 'dmbfan09', 53202860);
 INSERT INTO `bungie` VALUES(94371, '2010-08-28 00:59:00', '2010-08-28 11:28:00', 'Duardo', 48057220);
 INSERT INTO `bungie` VALUES(143388, '2010-08-28 07:32:00', '2010-08-28 11:27:40', 'Gods Prophet', 47752613);
 INSERT INTO `bungie` VALUES(350197, '2010-07-24 01:17:00', '2010-08-28 11:29:41', 'THE DON WAN', 43933990);
@@ -131,6 +132,7 @@ INSERT INTO `uwatch` VALUES(1, 29832, 'Captain K Mart', 'http://www.bungie.net/F
 INSERT INTO `uwatch` VALUES(1, 37221, 'GameJunkieJim', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_gamejunkiejim.gif');
 INSERT INTO `uwatch` VALUES(1, 38444, 'Nosferatu_Soldie', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_nosferatu.gif');
 INSERT INTO `uwatch` VALUES(1, 40153, 'ash55', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_ash55.gif');
+INSERT INTO `uwatch` VALUES(1, 89878, 'dmbfan09', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_dmbfan.gif');
 INSERT INTO `uwatch` VALUES(1, 94371, 'Duardo', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_duardo.gif');
 INSERT INTO `uwatch` VALUES(1, 143388, 'Gods Prophet', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_prophet.gif');
 INSERT INTO `uwatch` VALUES(1, 350197, 'THE DON WAN', 'http://www.bungie.net/Forums/skins/default/avatars/donwan.gif');
