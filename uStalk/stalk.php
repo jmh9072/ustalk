@@ -18,6 +18,8 @@ if ($_GET["client"] == "Greasemonkey" || $_GET["client"] == "XML" || $_GET["clie
 else if ($_GET["client"] == "mini")
 {
   $page['template'] = 'ministalk';
+} else if ($_GET['client'] == 'json') {
+  $page['template'] = 'json';
 }
 
 include "index.php";

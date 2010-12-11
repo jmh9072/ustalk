@@ -18,9 +18,26 @@ if(empty($stalkees))
 	echo "Selected user has no stalkees";
 	return;
 }
-$client = $_GET['client'];
-if ($client == "Greasemonkey" || $client == "XML" || $client == "xml")
-{
+$client = strtolower($_GET['client']);
+if($client == 'json') {
+  $display = intval($_GET['display']);
+
+  $first = true;
+  if($display) {
+    for($prey = 1; $prey <= $display && $prey < count($stalkees); $prey++) {
+      echo $first ? '' : ',';
+      $first = false;
+      template("stalk_json", $prey);
+    }
+  } else {
+    foreach ($stalkees as $prey) {
+      echo $first ? '' : ',';
+      $first = false;
+      template("stalk_json", $prey);
+    }
+  }
+
+} else if ($client == "greasemonkey" || $client == "xml") {
   $display = $_GET['display'];
   if ($display)
   {
