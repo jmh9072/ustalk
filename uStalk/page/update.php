@@ -3,7 +3,7 @@
 if($HEAD)
 	return;
 //get user ID
-if(!$_GET['bid'])
+if(!intval($_GET['bid']))
 {
 	echo "<message>No User Specified</message>";
 	return false;
@@ -16,7 +16,7 @@ require_once "lib/bungie.php";
 
 foreach($bids as $bid)
 {
-	$user = bungie::getUser($bid);
+	$user = bungie::getUser(intval($bid));
 	if($user)
 	{
 		$lastUpdate = strtotime($user['update']);

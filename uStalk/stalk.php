@@ -36,7 +36,7 @@ ignore_user_abort(true);
 
 //update all users being stalked
 ob_start();
-$uid = ($_GET['uid']);
+$uid = intval($_GET['uid']);
 if(!$uid)
 	$uid = 1;
 $stalkees = user::getStalkees($uid);
