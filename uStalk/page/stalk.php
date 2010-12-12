@@ -13,12 +13,16 @@ if(!$uid)
 }
 $stalkees = user::getStalkees($uid);
 global $bid;
+$client = strtolower($_GET['client']);
 if(empty($stalkees))
 {
+	if ($client == 'json') {
+          return;
+        }
 	echo "Selected user has no stalkees";
 	return;
 }
-$client = strtolower($_GET['client']);
+
 if($client == 'json') {
   $display = intval($_GET['display']);
 
