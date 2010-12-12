@@ -1,6 +1,6 @@
 <?PHP
 
-$uid = $_GET["uid"] . ".img";
+$uid = intval($_GET["uid"]) . ".img";
 
 //header ("content-type: image/jpeg");
 if (!file_exists($uid))

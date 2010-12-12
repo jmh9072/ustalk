@@ -6,7 +6,7 @@ if($HEAD)
 }
 
 //login form
-$uid = ($_GET['uid']);
+$uid = intval($_GET['uid']);
 if(!$uid)
 {
 	$uid = 1;
@@ -42,7 +42,7 @@ if($client == 'json') {
   }
 
 } else if ($client == "greasemonkey" || $client == "xml") {
-  $display = $_GET['display'];
+  $display = intval($_GET['display']);
   if ($display)
   {
     for ($prey = 1; $prey <= $display; $prey++)
