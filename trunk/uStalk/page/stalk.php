@@ -45,7 +45,7 @@ if($client == 'json') {
   $display = intval($_GET['display']);
   if ($display)
   {
-    for ($prey = 1; $prey <= $display; $prey++)
+    for ($prey = 1; $prey <= $display && $prey < count($stalkees); $prey++)
     {
       template("GM_XML", $stalkees[$prey - 1]);
     }
