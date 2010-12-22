@@ -4,8 +4,8 @@ user::requireLogin();
 global $error;
 $error = false;
 $page['name'] = 'setup';
-if ($_POST['action'] == "Delete")
-{
+
+if (array_key_exists('action', $_POST) && $_POST['action'] == "Delete") {
 	//delete user from list of stalkees
 	if (user::delete($_SESSION['user']['id'],
 			$_POST['bid']))
@@ -13,8 +13,8 @@ if ($_POST['action'] == "Delete")
 	else
 		$error='User could not be deleted.';
 }
-if ($_POST['action'] == "Update")
-{
+
+if (array_key_exists('action', $_POST) && $_POST['action'] == "Update") {
 	//update user with new info
 	if (user::update($_SESSION['user']['id'],
 			$_POST['bid'],
@@ -25,18 +25,18 @@ if ($_POST['action'] == "Update")
 	else
 		$error='User could not be updated.';
 }
-if($_POST['action'] == "Stalk!")
-{
+
+if(array_key_exists('action', $_POST) && $_POST['action'] == "Stalk!") {
 	//add user to list of stalkees
 	if(user::stalk($_SESSION['user']['id'],
 			$_POST['uid'],
 			$_POST['alias'],
 			$_POST['avatar']))
 		$error='User Successfully Added';
-	else 
+	else
 		$error='Unable to Stalk User';
 }
-if ($_POST['action'] == "Upload")
+if (array_key_exists('action', $_POST) && $_POST['action'] == "Upload")
 {
 	$target = "./images/backgrounds/" . $_SESSION['user']['id'] . ".img";
 	$allowed = true;
@@ -57,9 +57,9 @@ if ($_POST['action'] == "Upload")
 		{
 			$error = "Sorry, there was a problem uploading your file.";
 		}
-	} 
+	}
 }
-if ($_POST['action'] == "Change Password")
+if (array_key_exists('action', $_POST) && $_POST['action'] == "Change Password")
 {
 	$currentpass = md5($_POST['currentpass']);
 	$newpass = md5($_POST['newpass']);

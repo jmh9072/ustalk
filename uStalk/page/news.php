@@ -6,7 +6,7 @@ if($HEAD)
 }
 
 //news
-if ($_GET["login_fail"])
+if (array_key_exists('login_fail', $_GET) && $_GET["login_fail"])
 {
 	echo "<br /><br /><font color='red'>Error: Username/Password Combination does not exist.</font>";
 }
