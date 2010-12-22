@@ -24,18 +24,18 @@ else if ($_GET["client"] == "mini")
 
 include "index.php";
 $size = ob_get_length();
-header ("Content-Length: $size");
+header ("Content-Length: ".$size);
 session_write_close();
 
 //ob_flush();
 ob_end_flush();
+ob_end_flush();	//TODO //HACK TEMPORARY TO MAKE r36 work in production.
 flush();
 ignore_user_abort(true);
 
 //update all users being stalked
 require_once('lib/bungie.php');
 $uid = array_key_exists('uid', $_GET) ? intval($_GET['uid']) : 1;
-
 //TODO: Should make the query return "The right thing" instead of reducing down later.
 $stalkees = array_map(function($val) { return $val['bid']; }, user::listWatched($uid));
 
@@ -44,5 +44,4 @@ if(empty($stalkees))
 
 bungie::updateUsers($stalkees);
 
-ob_clean();
 ?>
