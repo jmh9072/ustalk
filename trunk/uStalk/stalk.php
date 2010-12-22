@@ -1,5 +1,4 @@
 <?
-ob_end_clean();
 //header("Connection: close");
 //ignore_user_abort(true);
 ob_start();
@@ -22,31 +21,28 @@ else if ($_GET["client"] == "mini")
   $page['template'] = 'json';
 }
 
+
 include "index.php";
 $size = ob_get_length();
 header ("Content-Length: $size");
 session_write_close();
 
-
 //ob_flush();
 ob_end_flush();
 flush();
-usleep(50000);
 ignore_user_abort(true);
 
 //update all users being stalked
-ob_start();
-$uid = intval($_GET['uid']);
-if(!$uid)
-	$uid = 1;
-$stalkees = user::getStalkees($uid);
-global $bid;
+require_once('lib/bungie.php');
+$uid = array_key_exists('uid', $_GET) ? intval($_GET['uid']) : 1;
+
+//TODO: Should make the query return "The right thing" instead of reducing down later.
+$stalkees = array_map(function($val) { return $val['bid']; }, user::listWatched($uid));
+
 if(empty($stalkees))
 	return;
-foreach($stalkees as $prey)
-{
-	$_GET['bid'] = $prey['bid'];
-	include "update.php";
-}
+
+bungie::updateUsers($stalkees);
+
 ob_clean();
 ?>

@@ -26,11 +26,12 @@ class user {
 			return false;
 		}
 	}
+
 	static function add($un,$pass)
 	{
 		$un = mysql_escape_string($un);
 		$pass = mysql_escape_string($pass);
-		$query = 'INSERT INTO `user` (`id`, `name`, `pass`) VALUES (NULL, \''.$un.'\', \''.$pass.'\');'; 
+		$query = 'INSERT INTO `user` (`id`, `name`, `pass`) VALUES (NULL, \''.$un.'\', \''.$pass.'\');';
 		$result = mysql_query($query);
 		if(mysql_errno())
 		{
@@ -46,7 +47,7 @@ class user {
 	{
 		$_SESSION['user'] = false;
 	}
-	
+
 	static function requireLogin()
 	{
 		if($_SESSION['user'])
@@ -54,6 +55,7 @@ class user {
 		header("location: ./");
 		die();
 	}
+
 	static function stalk($stalker,$bid,$alias,$avatar)
 	{
 		$stalker = mysql_escape_string(strip_tags($stalker));
@@ -61,7 +63,7 @@ class user {
 		$alias = mysql_escape_string(strip_tags($alias));
 		$avatar = mysql_escape_string(strip_tags($avatar));
 		$query = 'INSERT INTO `uwatch` (`id`, `bid`, `name`, `avatar` ) VALUES (\''
-				.$stalker.'\', \''.$bid.'\', \''.$alias.'\',\''.$avatar.'\');'; 
+				.$stalker.'\', \''.$bid.'\', \''.$alias.'\',\''.$avatar.'\');';
 		$result = mysql_query($query);
 		if(mysql_errno())
 		{
@@ -77,7 +79,7 @@ class user {
 		bungie::addUser($bid);
 		return true;
 	}
-	
+
 	static function getStalkees($uid)
 	{
 		$uid = mysql_escape_string($uid);
@@ -93,7 +95,7 @@ class user {
 		$stalkees;
 		while($row =mysql_fetch_assoc($result)) $stalkees[] = $row;
 		return $stalkees;
-		
+
 	}
 	static function listWatched($uid)
 	{
@@ -110,6 +112,7 @@ class user {
 		while($row =mysql_fetch_assoc($result)) $stalkees[] = $row;
 		return $stalkees;
 	}
+
 	static function delete($id, $bid)
 	{
 		$id = mysql_escape_string(strip_tags($id));
@@ -124,6 +127,7 @@ class user {
 		}
 		return true;
 	}
+
 	static function update($id, $bid, $alias, $avatar, $currentbid)
 	{
 		$id = mysql_escape_string(strip_tags($id));
@@ -161,7 +165,7 @@ class user {
 				."Please report this error to jmh9072";
 			return false;
 		}
-		
+
 		if ($result2 == $newpass)
 		{
 			return true;
