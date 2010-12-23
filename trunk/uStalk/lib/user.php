@@ -108,7 +108,7 @@ class user {
 				."Please report this error to jmh9072";
 			return false;
 		}
-		$stalkees;
+		$stalkees = array();
 		while($row =mysql_fetch_assoc($result)) $stalkees[] = $row;
 		return $stalkees;
 	}
