@@ -17,10 +17,10 @@ if($HEAD)
 		return true;
 	}
 //--></script>
-<form action="./register.php" method="POST" onSubmit='return processRegister();'>
+<form action="./register.php" method="post" onsubmit='return processRegister();'>
 <span class='error'><?=$error?></span><br />
 	User Name: <input name='asdf'id='asdf'  type='text' maxlength='30' /><br />
 	Password: <input name='qwerty' id='qwerty' type='password'/><br />
 
-	<input value='Register!' type='submit'>
+	<input value='Register!' type='submit' />
 </form>
