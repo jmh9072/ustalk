@@ -167,7 +167,16 @@ GM_xmlhttpRequest({
 	    temp += "</td><td>";
 	    temp += user[x].getElementsByTagName('date')[0].textContent;
 	    temp += "</td><td>";
-	    temp += user[x].getElementsByTagName('time')[0].textContent;
+
+            //parseInt() will make all the leading zeros in the hours place go away, as well as be explicit in string to Int conversions
+            var time = user[x].getElementsByTagName('time')[0].textContent.split(":");
+            if (parseInt(time[0], 10) == 0)
+                temp += "12:" + time[1] + "A";
+            else if (parseInt(time[0], 10) <= 12)
+                temp += parseInt(time[0], 10) + ":" + time[1] + "A";
+            else
+                temp += (parseInt(time[0], 10) - 12) + ":" + time[1] + "P";
+
 	    temp += "</td></tr>";
         }
 	temp += "</table></div>";
@@ -205,7 +214,16 @@ GM_xmlhttpRequest({
 	    temp2 += "</td><td>";
 	    temp2 += user2[y].getElementsByTagName('date')[0].textContent;
 	    temp2 += "</td><td>";
-	    temp2 += user2[y].getElementsByTagName('time')[0].textContent;
+
+            //parseInt() will make all the leading zeros in the hours place go away, as well as be explicit in string to Int conversions
+            var time2 = user2[y].getElementsByTagName('time')[0].textContent.split(":");
+            if (parseInt(time2[0], 10) == 0)
+                temp2 += "12:" + time2[1] + "A";
+            else if (parseInt(time2[0], 10) <= 12)
+                temp2 += parseInt(time2[0], 10) + ":" + time2[1] + "A";
+            else
+                temp2 += (parseInt(time2[0], 10) - 12) + ":" + time2[1] + "P";
+
 	    temp2 += "</td></tr>";
 	}
 	temp2 += "</table></div>";
