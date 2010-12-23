@@ -51,7 +51,16 @@ else
 	    temp += "</td><td>";
 	    temp += user[x].getElementsByTagName('date')[0].textContent;
 	    temp += "</td><td>";
-	    temp += user[x].getElementsByTagName('time')[0].textContent;
+
+	    //parseInt() will make all the leading zeros in the hours place go away, as well as be explicit in string to Int conversions
+	    var time = user[x].getElementsByTagName('time')[0].textContent.split(":");
+	    if (parseInt(time[0], 10) == 0)
+		temp += "12:" + time[1] + " AM";
+	    else if (parseInt(time[0], 10) <= 12)
+		temp += parseInt(time[0], 10) + ":" + time[1] + " AM";
+	    else
+		temp += (parseInt(time[0], 10) - 12) + ":" + time[1] + " PM";
+	    
 	    temp += "</td></tr>";
         }
 		
