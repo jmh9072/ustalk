@@ -23,7 +23,7 @@ if($HEAD)
 <div class='login'>
 <form action="./login.php" method="post" onsubmit='return process();'>
 <div class='error' style='display: inline'><?=$error?>&nbsp;<br /></div>
-	User Name: <input name='tyui'id='tyui'  type='text' maxlength='30' /><br />
+	User Name: <input name='tyui' id='tyui'  type='text' maxlength='30' /><br />
 	Password: <input name='ghjk' id='ghjk' type='password'/><br />
 <script type='text/javascript'><!--
 		var challenge = '<?
