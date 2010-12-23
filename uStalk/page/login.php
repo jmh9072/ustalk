@@ -21,11 +21,11 @@ if($HEAD)
 	linkJS("md5");
 ?>
 <div class='login'>
-<form action="./login.php" method="POST" onSubmit='return process();'>
-<span class='error'><?=$error?>&nbsp;</span><br />
+<form action="./login.php" method="post" onsubmit='return process();'>
+<div class='error' style='display: inline'><?=$error?>&nbsp;<br /></div>
 	User Name: <input name='tyui'id='tyui'  type='text' maxlength='30' /><br />
 	Password: <input name='ghjk' id='ghjk' type='password'/><br />
-<script type='text/javascript' language="JavaScript"><!--
+<script type='text/javascript'><!--
 		var challenge = '<?
 		if(!$_SESSION['challenge'])
 		{
@@ -44,6 +44,6 @@ if($HEAD)
 		return true;
 	}
 //--></script>
-	<input value='Login!' type='submit' >
+	<input value='Login!' type='submit' />
 </form>
 </div>
