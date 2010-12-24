@@ -5,7 +5,7 @@ $uid=1;
 ?>
 <html>
 <head>
-<title>uStalk Test</title>
+<title>User's Stalk Page : uStalk</title>
 <script type="text/javascript">
 function welcome()
 {
