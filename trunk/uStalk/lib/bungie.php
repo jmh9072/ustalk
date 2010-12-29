@@ -1,4 +1,5 @@
 <?
+
 class bungie
 {
 	static function getUser($bid)
@@ -137,5 +138,6 @@ class bungie
 		}
 		return $result_array;
 	}
+
 }
 ?>
