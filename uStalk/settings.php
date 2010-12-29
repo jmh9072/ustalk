@@ -28,19 +28,5 @@ if (file_exists('local_settings.php')) {
 	if(!is_array($local_settings))
 		die('Local settings file MUST return an array.');
 }
-$settings = array_merge($defaults, $local_settings);
-
-//connect to db
-if(array_key_exists('mysql', $settings)) {
-	$db = @mysql_connect($settings['mysql']['host'], $settings['mysql']['username'], $settings['mysql']['password']);
-
-	if(mysql_errno()) {
-		print(mysql_errno());
-		die("Error connecting to database, contact ".$settings['contact_name']." immediately");
-	}
-
-	mysql_select_db($settings['mysql']['db']);
-} else {
-	die('You must provide a local settings file telling ustalk what mysql server to connect to. At the moment no other databases are supported.');
-}
+return array_merge($defaults, $local_settings);
 ?>
