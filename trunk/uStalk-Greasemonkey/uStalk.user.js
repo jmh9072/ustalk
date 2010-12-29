@@ -1,5 +1,5 @@
 // Mod/User Stalker
-// Version 1.1
+// Version 1.1.1
 // 9/20/2010
 // Script created by CAVX, modified by jmh9072
 // ModStalker and uStalker created by jmh9072 and Firebird347
@@ -140,7 +140,7 @@ document.getElementById("wrench").addEventListener('click',reConfig, true);
 			{
 GM_xmlhttpRequest({
     method: 'GET',
-    url: 'http://ustalk.jmh9072.com/stalk.php?client=Greasemonkey&version=1.1&uid='+GM_getValue('uStalker', '1')+'&display='+display,
+    url: 'http://ustalk.jmh9072.com/stalk.php?client=xml&uid='+GM_getValue('uStalker', '1')+'&display='+display+'&source=greasemonkey&version=1.1.1',
     headers: {
         'User-agent': 'Mozilla/4.0 (compatible) Greasemonkey',
 	'Accept': 'application/atom+xml,application/xml,text/xml',
@@ -188,7 +188,7 @@ GM_xmlhttpRequest({
 			{
 GM_xmlhttpRequest({
     method: 'GET',
-    url: 'http://ustalk.jmh9072.com/stalk.php?client=Greasemonkey&version=1.1&uid=1&display='+display,
+    url: 'http://ustalk.jmh9072.com/stalk.php?client=xml&uid=1&display='+display+'&source=greasemonkey&version=1.1.1',
     headers: {
         'User-agent': 'Mozilla/4.0 (compatible) Greasemonkey',
     },
