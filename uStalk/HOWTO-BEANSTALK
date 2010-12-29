@@ -1,0 +1,19 @@
+Step 1:
+Install and start beanstalkd
+
+Step 2:
+Install pheanstalk 
+
+pear channel-discover pearhub.org
+pear install pearhub/Pheanstalk
+
+Step 3:
+Edit your ustalk local config, add
+	'beanstalk' => array(
+		'host' => '127.0.0.1',
+		'tube' => 'ustalk'
+	)
+
+Step 4:
+Add a cronjob which checks that restarts the php job
+handler (uStalk/beanstalk_processor.php) every 30 minutes. (PHP eats file handles...)
