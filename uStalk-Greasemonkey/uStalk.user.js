@@ -1,6 +1,6 @@
 // Mod/User Stalker
 // Version 1.1.1
-// 9/20/2010
+// 12/31/2010
 // Script created by CAVX, modified by jmh9072
 // ModStalker and uStalker created by jmh9072 and Firebird347
 //
@@ -146,7 +146,7 @@ GM_xmlhttpRequest({
 	'Accept': 'application/atom+xml,application/xml,text/xml',
     },
     onload: function(responseDetails) {
-        var temp = "<div id='uStalker'><div style='background:url(http://www.bungie.net/images/base_struct_images/contentBg/blueheader.jpg); width:271px; padding-top:2px; padding-left:5px; height:34px;'><span style='font-size:15px; font-weight:normal;'><a href='http://ustalk.jmh9072.com/stalk.php?uid="+GM_getValue('uStalker', '1')+"' style='float:right; margin-right:5px;' target='_blank'>[+]</a>uStalk</span></div><TABLE cellpadding='5px' style='margin-top:-22px;'><TR><TH width='36'>Avatar</TH><TH width='110'>Name</TH><TH width='52'>Date</TH><TH>Time</TH></TR>";
+        var temp = "<div id='uStalker'><div style='background:url(http://www.bungie.net/images/base_struct_images/contentBg/blueheader.jpg); width:271px; padding-top:2px; padding-left:5px; height:34px;'><span style='font-size:15px; font-weight:normal;'><a href='http://ustalk.jmh9072.com/uStalk.php?uid="+GM_getValue('uStalker', '1')+"' style='float:right; margin-right:5px;' target='_blank'>[+]</a>uStalk</span></div><TABLE cellpadding='5px' style='margin-top:-22px;'><TR><TH width='36'>Avatar</TH><TH width='110'>Name</TH><TH width='52'>Date</TH><TH>Time</TH></TR>";
 
         var parser = new DOMParser();
         var dom = parser.parseFromString(responseDetails.responseText,
@@ -193,7 +193,7 @@ GM_xmlhttpRequest({
         'User-agent': 'Mozilla/4.0 (compatible) Greasemonkey',
     },
     onload: function(responseDetails) {
-        var temp2 = "<div id='modStalker'><div style='background:url(http://www.bungie.net/images/base_struct_images/contentBg/blueheader.jpg); width:271px; padding-top:2px; padding-left:5px; height:34px;'><span style='font-size:15px; font-weight:normal;'><a href='http://ustalk.jmh9072.com/stalk.php?uid=1' style='float:right; margin-right:5px;' target='_blank'>[+]</a>Mod Stalker</span></div><TABLE cellpadding='5px' style='margin-top:-22px;'><TR><TH width='36'>Avatar</TH><TH width='110'>Name</TH><TH width='52'>Date</TH><TH>Time</TH></TR>";
+        var temp2 = "<div id='modStalker'><div style='background:url(http://www.bungie.net/images/base_struct_images/contentBg/blueheader.jpg); width:271px; padding-top:2px; padding-left:5px; height:34px;'><span style='font-size:15px; font-weight:normal;'><a href='http://ustalk.jmh9072.com/uStalk.php?uid=1' style='float:right; margin-right:5px;' target='_blank'>[+]</a>Mod Stalker</span></div><TABLE cellpadding='5px' style='margin-top:-22px;'><TR><TH width='36'>Avatar</TH><TH width='110'>Name</TH><TH width='52'>Date</TH><TH>Time</TH></TR>";
 
         var parser2 = new DOMParser();
         var dom2 = parser2.parseFromString(responseDetails.responseText,
