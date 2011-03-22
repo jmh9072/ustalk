@@ -96,7 +96,7 @@ addGlobalStyle(
 '  font-family: arial, sans-serif !important; font-size:11px; color:#ffffff;' +
 '}');
 </script>
-<div id='uStalker'><div style='background:url(http://www.bungie.net/images/base_struct_images/contentBg/blueheader.jpg); width:271px; padding-top:2px; padding-left:5px; height:34px;'><span style='font-size:15px; font-weight:normal;'><a href='./stalk.php?uid=1' style='float:right; margin-right:5px;' target='_blank'>[+]</a>uStalk</span></div><TABLE cellpadding='5px' style='margin-top:-22px;'><TR><TH width='36'>Avatar</TH><TH width='110'>Name</TH><TH width='52'>Date</TH><TH>Time</TH></TR>
+<div id='uStalker'><div style='background:url(http://www.bungie.net/images/base_struct_images/contentBg/blueheader.jpg); width:271px; padding-top:2px; padding-left:5px; height:34px;'><span style='font-size:15px; font-weight:normal;'><a href='./stalk.php?uid=1' style='float:right; margin-right:5px;' target='_blank'>[+]</a>uStalk</span></div><table cellpadding='5px' style='margin-top:-22px;'><tr><th width='36'>Avatar</th><th width='110'>Name</th><th width='52'>Date</th><th>Time</th></tr>
 <?
   foreach ($stalkees as $prey)
   {
@@ -104,25 +104,25 @@ addGlobalStyle(
   }
 ?>
 </div>
-</TABLE>
+</table>
 <?
 } else {
 
 ?>
-<TABLE BORDER="1" BGCOLOR="WHITE">
-<TR>
-<TH>Avatar</TH>
-<TH>Name</TH>
-<TH>Date</TH>
-<TH>Time</TH>
-</TR>
+<table BORDER="1" BGCOLOR="WHITE">
+<tr>
+<th>Avatar</th>
+<th>Name</th>
+<th>Date</th>
+<th>Time</th>
+</tr>
 <?
 foreach($stalkees as $prey)
 {
 	template("stalkee",$prey);
 }
 ?>
-</TABLE>
+</table>
 <?
 }
 ?>
