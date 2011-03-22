@@ -20,9 +20,9 @@ function validate()
 		avatarError.innerHTML = 'You Must Enter a Valid URL';
 		result = false;
 	}
-	
-	if(!((uid.value.search(/[0-9]*/i))))
-	{
+  */ 
+  //if(!((uid.value.search(/[0-9]*/i))))
+  /* {
 		if(uid.value=='undefined')
 		{
 			uid.value='';
