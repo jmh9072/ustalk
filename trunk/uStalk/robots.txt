@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /.svn/
+Disallow: /common.php
+Disallow: /images/backgrounds/
+Disallow: /lib/
+Disallow: /local_settings.php
+Disallow: /ustalk.php
+Disallow: /uStalk.php
+Disallow: /register.php
+Disallow: /settings.php
+Disallow: /setupdatabase.sql
+Disallow: /stalk.php
+Disallow: /template/
+Disallow: /update.php
