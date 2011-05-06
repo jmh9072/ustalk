@@ -7,4 +7,5 @@
 <li><a href='./register.php'>Register</a></li>
 <? } ?>
 <li><a href='./uStalk.php'>Mod Stalk</a></li>
+<li><a href='./help.php'>Help Center</a></li>
 <li><a href='./about.php'>About</a></li>
