@@ -1,0 +1,4 @@
+<Files ~ "beanstalk_processor.php">
+  order allow,deny
+  deny from all
+</Files>
