@@ -63,6 +63,7 @@ INSERT INTO `bungie` VALUES(1659344, '2010-08-27 21:21:00', '2010-08-28 11:28:15
 INSERT INTO `bungie` VALUES(1667625, '2010-04-29 19:22:00', '2010-08-28 11:30:00', 'Skiptrace', 43429264);
 INSERT INTO `bungie` VALUES(1804295, '2010-07-01 02:30:00', '2010-08-28 11:29:56', 'runningturtle', 45634237);
 INSERT INTO `bungie` VALUES(1837598, '2010-08-28 05:32:00', '2010-08-28 11:27:46', 'Tom T', 48034678);
+INSERT INTO `bungie` VALUES(1847514, '2011-09-21 15:01:00', '2011-09-21 17:38:30', 'evilcam', 66026658);
 INSERT INTO `bungie` VALUES(1848159, '2010-08-27 16:00:00', '2010-08-28 11:28:41', 'x Foman123 x', 47976451);
 INSERT INTO `bungie` VALUES(2285405, '2010-07-09 15:59:00', '2010-08-28 11:29:47', 'lukems', 45968034);
 INSERT INTO `bungie` VALUES(2500705, '2010-07-29 09:13:00', '2010-08-28 11:29:36', 'Pezz', 46203336);
@@ -144,6 +145,7 @@ INSERT INTO `uwatch` VALUES(1, 1659344, 'The Slayer', 'http://www.bungie.net/For
 INSERT INTO `uwatch` VALUES(1, 1667625, 'Skiptrace', 'http://www.bungie.net/Forums/skins/default/avatars/default_avatar.gif');
 INSERT INTO `uwatch` VALUES(1, 1804295, 'runningturtle', 'http://www.bungie.net/Forums/skins/default/avatars/runningturtle.gif');
 INSERT INTO `uwatch` VALUES(1, 1837598, 'Tom T', 'http://www.bungie.net/Stats/emblem.ashx?s=90&0=15&1=2&2=15&3=2&fi=10&bi=38&fl=1&m=3');
+INSERT INTO `uwatch` VALUES(1, 1847514, 'evilcam', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_evilcam.gif');
 INSERT INTO `uwatch` VALUES(1, 1848159, 'x Foman123 x', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_foman.gif');
 INSERT INTO `uwatch` VALUES(1, 2285405, 'lukems', 'http://www.bungie.net/Forums/skins/default/avatars/marathon.gif');
 INSERT INTO `uwatch` VALUES(1, 2500705, 'Pezz', 'http://www.bungie.net/Forums/skins/default/avatars/moderator_pezza.gif');
