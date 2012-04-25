@@ -44,22 +44,31 @@ def updateUser(bid):
     bungiethread = urlopen('http://www.bungie.net/Forums/posts.aspx?postID=%s' % userpost)
 
     #use regex to get last post time
-    posthead = re.search(r"jmh9072<\/a>.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*last post: (.*) P" % username, bungiethread.read())
+    posthead = re.search(r"%s<\/a>.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*\n.*last post: (.*) P" % username, bungiethread.read())
     if posthead:
-      print "old postid finish: ",bid
+      print "old postid finish:",bid
       updateRow(bid, datetime.strptime(posthead.group(1),"%m.%d.%Y %I:%M %p"), userpost)
       return
 
   #If we don't have a username, look one up by accessing the user's profile
+  else:
+    print "No username found for user",bid
+    userpage = urlopen('http://www.bungie.net/Account/Profile.aspx?uid=%s' % bid)
+    username = re.search(r"<span id=\"ctl00_mainContent_header_lblUsername\">([^<]*)/",userpage.read()) #what is wrong with this expression?
+      if username:
+        print "found",username
+        # ADD: UPDATE DATABASE WITH NEWLY FOUND USERNAME
 
-  #Find a post for the user doing a search by exact username
-  #Grab the last post time from the username.
-  raise TNotImplementedError()
-  if not done:
-    pass
+        #Find a post for the user doing a search by exact username
+        #Grab the last post ID from the username.
+        bungiesearch = urlopen('http://www.bungie.net/Search/default.aspx?g=5&q=%s' % username)
 
 
-  #update info in database
+        #update info in database
+
+
+      else:
+        print "error getting username for user", bid
 
   #close cursor and disconnect database
   cursor.close()
