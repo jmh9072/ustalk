@@ -32,11 +32,18 @@ else
         var temp = "<TABLE BORDER='1' BGCOLOR='WHITE'><TR><TH>Avatar</TH><TH>Name</TH><TH>Date</TH><TH>Time</TH></TR>";
 
         var user = JSON.parse(xmlhttp.responseText);
+	
+	var allUsersUpToDate = true;
 
         for (var x = 0; x < user.length; x++)
         {
 	    if (user[x].online)
 	      temp += "<tr BGCOLOR='GOLD'><td>";
+	    else if (!user[x].upToDate)
+	    {
+	      allUsersUpToDate = false;
+	      temp += "<tr BGCOLOR='RED'><td>";
+	    }
 	    else
 	      temp += "<tr><td>";
 	    temp += "<a href=\"http://www.bungie.net/Account/Profile.aspx?uid=";
@@ -64,6 +71,8 @@ else
 		
 		temp += "</table>";
 		document.getElementById("uStalk").innerHTML = temp;
+		if (!allUsersUpToDate)
+			document.getElementById("usersUpToDate").innerHTML = "Some users have outdated information in the database. We are now updating them and will reload them when this is complete.";
 		if (user)
 		{
 				document.getElementById("status").innerHTML = "Weclome to uStalk v1.4-devel!";
@@ -99,6 +108,8 @@ Welcome to uStalk v1.4-devel!
 <?PHP
 echo "If your browser is having trouble loading this page, please go <a href=\"stalk.php?uid=".$uid."\">here</a>.";
 ?>
+</div>
+<div id='usersUpToDate'>
 </div>
 <div id='uStalk'>
 </div>
