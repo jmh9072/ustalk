@@ -9,10 +9,10 @@ $uid=1;
 <script type="text/javascript">
 function welcome()
 {
-	document.getElementById("status").innerHTML = "Welcome to uStalk v1.2!";
+	document.getElementById("status").innerHTML = "Welcome to uStalk v1.4-devel!";
 }
 
-function loadXMLDoc(url)
+function getStalkData(url)
 {
 document.getElementById("status").innerHTML += "<br />Attemping to download stalking data...";
 document.getElementById("status").innerHTML += "<br /><img src='images/ajax-loading.gif' />";
@@ -31,29 +31,26 @@ else
     {
         var temp = "<TABLE BORDER='1' BGCOLOR='WHITE'><TR><TH>Avatar</TH><TH>Name</TH><TH>Date</TH><TH>Time</TH></TR>";
 
-        var parser = new DOMParser();
-        var dom = parser.parseFromString(xmlhttp.responseText,
-            "application/xml");
-        var user = dom.getElementsByTagName('user');
+        var user = JSON.parse(xmlhttp.responseText);
 
         for (var x = 0; x < user.length; x++)
         {
-	    if (user[x].getElementsByTagName('online')[0].textContent == "1")
+	    if (user[x].online == "1")
 	      temp += "<tr BGCOLOR='GOLD'><td>";
 	    else
 	      temp += "<tr><td>";
 	    temp += "<a href=\"http://www.bungie.net/Account/Profile.aspx?uid=";
-        temp += user[x].getElementsByTagName('uid')[0].textContent;
+        temp += user[x].uid;
 	    temp += "\"><img src=\"";
-	    temp += user[x].getElementsByTagName('avatar')[0].textContent;
+	    temp += user[x].avatar;
 	    temp += "\"></a></td><td>";
-	    temp += user[x].getElementsByTagName('name')[0].textContent;
+	    temp += user[x].name;
 	    temp += "</td><td>";
-	    temp += user[x].getElementsByTagName('date')[0].textContent;
+	    temp += user[x].date;
 	    temp += "</td><td>";
 
 	    //parseInt() will make all the leading zeros in the hours place go away, as well as be explicit in string to Int conversions
-	    var time = user[x].getElementsByTagName('time')[0].textContent.split(":");
+	    var time = user[x].time.split(":");
 	    if (parseInt(time[0], 10) == 0)
 		temp += "12:" + time[1] + " AM";
 	    else if (parseInt(time[0], 10) <= 12)
@@ -66,9 +63,9 @@ else
 		
 		temp += "</table>";
 		document.getElementById("uStalk").innerHTML = temp;
-		if (dom.getElementsByTagName('ustalk'))
+		if (user)
 		{
-				document.getElementById("status").innerHTML = "Weclome to uStalk v1.2!";
+				document.getElementById("status").innerHTML = "Weclome to uStalk v1.4-devel!";
 				document.getElementById("status").innerHTML += "<br />Data successfully retrieved! It has been displayed below.";
 				setTimeout("welcome()", 5000);
 		}
@@ -92,14 +89,14 @@ xmlhttp.send();
 </script>
 </head>
 <?PHP
-echo "<body onLoad=\"loadXMLDoc('stalk.php?uid=".$uid."&client=xml')\" background=\"/images/backgrounds/background.php?uid=".$uid."\">";
+echo "<body onLoad=\"getStalkData('stalk.php?uid=".$uid."&client=json')\" background=\"/images/backgrounds/background.php?uid=".$uid."\">";
 ?>
 
 <div id='status'>
-Welcome to uStalk v1.2!
+Welcome to uStalk v1.4-devel!
 <BR />
 <?PHP
-echo "If your browser doesn't support AJAX, please go <a href=\"stalk.php?uid=".$uid."\">here</a>.";
+echo "If your browser is having trouble loading this page, please go <a href=\"stalk.php?uid=".$uid."\">here</a>.";
 ?>
 </div>
 <div id='uStalk'>
