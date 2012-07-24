@@ -35,7 +35,7 @@ else
 
         for (var x = 0; x < user.length; x++)
         {
-	    if (user[x].online == "1")
+	    if (user[x].online)
 	      temp += "<tr BGCOLOR='GOLD'><td>";
 	    else
 	      temp += "<tr><td>";
@@ -45,6 +45,7 @@ else
 	    temp += user[x].avatar;
 	    temp += "\"></a></td><td>";
 	    temp += user[x].name;
+	    temp += "<BR /><FONT SIZE=2><A HREF=\"http://www.bungie.net/Account/Profile.aspx?uid=" + user[x].uid + "\">Profile</A></FONT>";
 	    temp += "</td><td>";
 	    temp += user[x].date;
 	    temp += "</td><td>";
