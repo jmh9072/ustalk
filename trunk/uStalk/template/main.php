@@ -26,7 +26,7 @@ if (file_exists('local_tracking.php')) {
 include "page/login.php";
 ?>
 <div class="version">
-uStalk v1.2
+uStalk v1.4-devel
 </div>
 </body>
 </html>
